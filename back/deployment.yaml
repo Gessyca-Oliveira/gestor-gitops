@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestor-back
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gestor-back
+  template:
+    metadata:
+      labels:
+        app: gestor-back
+    spec:
+      containers:
+        - name: back
+          image: gessyca04/gestor-financeiro-back
+          ports:
+            - containerPort: 8000
