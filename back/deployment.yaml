@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: back
-          image: gessyca04/gestor-financeiro-back:v1.0.3
+          image: gessyca04/gestor-back:v1.0.3
           ports:
             - containerPort: 8000
