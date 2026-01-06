@@ -17,3 +17,15 @@ spec:
           image: gessyca04/gestor-back:v1.0.3
           ports:
             - containerPort: 8000
+          env:
+            - name: SUPABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: supabase-secret
+                  key: SUPABASE_URL
+            - name: SUPABASE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: supabase-secret
+                  key: SUPABASE_KEY
+
