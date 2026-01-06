@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestor-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gestor-front
+  template:
+    metadata:
+      labels:
+        app: gestor-front
+    spec:
+      containers:
+        - name: front
+          image: gessyca04/gestor-financeiro-front
+          ports:
+            - containerPort: 80
