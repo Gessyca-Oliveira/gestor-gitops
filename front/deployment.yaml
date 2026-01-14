@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
         - name: front
-          image: gessyca04/gestor-financeiro-front:v1.0.4
+          image: gessyca04/gestor-financeiro-front:v1.0.5
           ports:
             - containerPort: 80
